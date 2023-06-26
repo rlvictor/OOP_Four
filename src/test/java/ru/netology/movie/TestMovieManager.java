@@ -39,7 +39,22 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastDefaultLimitFourFilms(){
+    public void testFindAllFiveFilms() {
+        MovieManager manager = new MovieManager();
+
+        manager.addMovie("Film I");
+        manager.addMovie("Film II");
+        manager.addMovie("Film III");
+        manager.addMovie("Film IV");
+        manager.addMovie("Film V");
+
+        String[] expected = {"Film I", "Film II", "Film III", "Film IV", "Film V"};
+        String[] actual = manager.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testFindLastDefaultLimitFourFilms() {
         MovieManager manager = new MovieManager();
 
         manager.addMovie("Film I");
@@ -53,7 +68,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastDefaultLimitFiveFilms(){
+    public void testFindLastDefaultLimitFiveFilms() {
         MovieManager manager = new MovieManager();
 
         manager.addMovie("Film I");
@@ -68,7 +83,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastDefaultLimitSixFilms(){
+    public void testFindLastDefaultLimitSixFilms() {
         MovieManager manager = new MovieManager();
 
         manager.addMovie("Film I");
@@ -84,7 +99,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastSevenLimitSixFilms(){
+    public void testFindLastSevenLimitSixFilms() {
         MovieManager manager = new MovieManager(7);
 
 
@@ -102,7 +117,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastSevenLimitSevenFilms(){
+    public void testFindLastSevenLimitSevenFilms() {
         MovieManager manager = new MovieManager(7);
 
         manager.addMovie("Film I");
@@ -119,7 +134,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastSevenLimitEightFilms(){
+    public void testFindLastSevenLimitEightFilms() {
         MovieManager manager = new MovieManager(7);
 
         manager.addMovie("Film I");
@@ -137,7 +152,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastThreeLimitTwoFilms(){
+    public void testFindLastThreeLimitTwoFilms() {
         MovieManager manager = new MovieManager(3);
 
         manager.addMovie("Film I");
@@ -149,7 +164,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastThreeLimitThreeFilms(){
+    public void testFindLastThreeLimitThreeFilms() {
         MovieManager manager = new MovieManager(3);
 
         manager.addMovie("Film I");
@@ -162,7 +177,7 @@ public class TestMovieManager {
     }
 
     @Test
-    public void testFindLastThreeLimitFourFilms(){
+    public void testFindLastThreeLimitFourFilms() {
         MovieManager manager = new MovieManager(3);
 
         manager.addMovie("Film I");
